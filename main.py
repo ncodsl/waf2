@@ -1,8 +1,8 @@
-from flask import Flask
+from website import create_app
 
-app = Flask(__name__)
+app = create_app()
+
+# Remove the if __name__ == '__main__' block for Vercel deployment
+# Instead, just export the app variable
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
